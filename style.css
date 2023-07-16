@@ -117,3 +117,14 @@ body {
     background-color: var(--medium-Grey);
     border-radius: 3px;
 }
+
+/* Media query */
+
+@media screen and (max-width: 375px) {
+    .component,
+    .thankyou-component {
+        max-width: 100%;
+        width: 100%;
+        min-width: 375px;
+    }
+  }
