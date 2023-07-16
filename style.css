@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@300;400&display=swap');
+
+/* Custom Properties */
+:root {
+    --white: hsl(0, 0%, 100%);
+    --orange: hsl(25, 97%, 53%);
+    --light-Grey: hsl(217, 12%, 63%);
+    --medium-Grey: hsl(216, 12%, 54%);
+    --dark-Blue: hsl(213, 19%, 18%);
+    --very-dark-Blue: hsl(216, 12%, 8%);
+}
+
+/* CSS reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--very-dark-Blue);
+    font-family: 'Overpass', sans-serif;
+}
+
+.component,.thankyou-component {
+    /* display: none; */
+    max-width: 900px;
+    width: 300px;
+    background-color: var(--dark-Blue);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+.component > * {
+    margin-bottom: 15px;
+}
+.component h2, .thankyou-component h2 {
+    color: white;
+    font-weight: 400;
+}
+.component p, .thankyou-component p {
+    color: grey;
+}
+.component .icon {
+    width: 25px;
+    height: 25px;
+    background-color: var(--light-Grey);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.component .rating-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.component .rating {
+    width: 30px;
+    height: 30px;
+    background-color: var(--medium-Grey);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.component .rating:hover{
+    background-color: var(--light-Grey);
+    transform: scale(1.2);
+} 
+
+.component .rating:active{
+    background-color: var(--orange);
+}
+.component button {
+    width: 100%;
+    cursor: pointer;
+    padding: 7px;
+    background-color: var(--orange);
+    border: none;
+    outline: none;
+    color: white;
+    letter-spacing: 0.7px;
+    border-radius: 20px;
+}
+
+.component button:hover {
+    color: var(--orange);
+    background-color: white;
+}
+
+
+/* styling thankyou-component elements */
+
+.thankyou-component {
+    display: none; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.thankyou-component > * {
+    margin-bottom: 20px;
+}
+
+#rating-output {
+    color: var(--orange);
+    padding: 5px 8px;
+    background-color: var(--medium-Grey);
+    border-radius: 3px;
+}
