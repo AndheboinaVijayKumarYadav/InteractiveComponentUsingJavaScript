@@ -78,7 +78,7 @@ body {
     transform: scale(1.2);
 } 
 
-.component .rating:active{
+.component .rating.active{
     background-color: var(--orange);
 }
 .component button {
